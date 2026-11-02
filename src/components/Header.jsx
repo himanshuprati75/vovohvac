@@ -21,13 +21,6 @@ export default function Header({ onOpenCallModal }) {
     { name: 'Service Areas', href: '#service-areas' },
   ];
 
-  const handleDesktopCallClick = (e) => {
-    if (typeof window !== 'undefined' && window.innerWidth >= 1024 && onOpenCallModal) {
-      e.preventDefault();
-      onOpenCallModal();
-    }
-  };
-
   return (
     <>
       {/* Slim Mobile Trust Bar (< 640px) - Requirement 4 */}
@@ -117,7 +110,6 @@ export default function Header({ onOpenCallModal }) {
 
               <a
                 href="tel:6163094425"
-                onClick={handleDesktopCallClick}
                 id="desktop-header-call-btn"
                 className="relative inline-flex items-center justify-center px-5 sm:px-6 py-3 rounded-xl font-black text-sm sm:text-base text-white bg-rescue-500 hover:bg-rescue-600 active:scale-95 transition-all duration-150 shadow-md shadow-rescue-500/20 group"
               >

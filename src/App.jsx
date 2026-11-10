@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import TrustShield from './components/TrustShield';
@@ -71,6 +72,9 @@ export default function App() {
 
       {/* Desktop Call Modal (Eliminates desktop tel: prompt friction) */}
       <CallModal isOpen={isCallModalOpen} onClose={handleCloseCallModal} />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
